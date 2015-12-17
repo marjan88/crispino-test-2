@@ -17,7 +17,7 @@ class Registrar implements RegistrarContract
                     'password'   => 'required|confirmed|min:6',
                     'first_name' => 'required',
                     'last_name'  => 'required',
-                    'location'   => 'required',
+                   
         ]);
     }
 
@@ -29,7 +29,7 @@ class Registrar implements RegistrarContract
                     'password'   => bcrypt($data['password']),
                     'first_name' => $data['first_name'],
                     'last_name'  => $data['last_name'],
-                    'location'   => $data['location'],
+                    
         ]);
     }
 

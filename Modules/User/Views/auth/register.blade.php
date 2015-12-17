@@ -2,7 +2,7 @@
 @section('content')
 <form method="post" class="form-signin" action="{{route('register')}}">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
-    <h2 class="form-signin-heading">Chatty</h2>
+    <h2 class="form-signin-heading">Crispino</h2>
     <p class="text-center">Be the part of Chatty World</p>
     
     <div class="form-group {{{ $errors->has('username') ? 'has-error' : '' }}}">
@@ -34,13 +34,7 @@
         <label class="sr-only" for="last_name">Username</label>
         <input type="text" placeholder="Last name" class="form-control" id="last_name" name="last_name" value="{{\Request::old('last_name') ?: ''}}">
         {!! $errors->first('last_name', '<span class="help-block" role="alert"><small>:message</small></span>')!!}
-    </div>
-     <div class="form-group {{{ $errors->has('location') ? 'has-error' : '' }}}">
-        <label class="sr-only" for="location">Location</label>
-        <input type="text" placeholder="Location" class="form-control" id="location" name="location" value="{{\Request::old('location') ?: ''}}">
-        {!! $errors->first('location', '<span class="help-block" role="alert"><small>:message</small></span>')!!}
-    </div>
-   
+    </div>       
     <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
 </form>
 @stop

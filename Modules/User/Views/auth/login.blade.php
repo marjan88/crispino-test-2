@@ -2,7 +2,7 @@
 @section('content')
 <form method="post" class="form-signin" action="{{route('login')}}">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
-    <h2 class="form-signin-heading">Chatty</h2>
+    <h2 class="form-signin-heading">Crispino</h2>
      <p class="text-center">Please login into your account.</p>
 
     <div class="form-group {{{ $errors->has('email') ? 'has-error' : '' }}}">

@@ -154,6 +154,9 @@ return [
         Modules\User\Providers\UserServiceProvider::class,
         Modules\User\Providers\RouteServiceProvider::class,
         
+        Modules\Task\Providers\TaskServiceProvider::class,
+        Modules\Task\Providers\RouteServiceProvider::class,
+        
         
         
 

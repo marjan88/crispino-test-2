@@ -7,20 +7,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{{route('home')}}" class="navbar-brand">Chatty</a>
+            <a href="{{route('home')}}" class="navbar-brand">Crispino</a>
         </div>
         <div class="navbar-collapse collapse" id="navbar">
             @if(\Auth::user())
             <ul class="nav navbar-nav">
-                <li @if(\Request::is('/')) class="active" @endif><a href="/">Timeline</a></li>
-                <li  @if(\Request::is('/friends')) class="active" @endif><a href="{{route('user.friends')}}">
-                        @if(\Auth::user()->getFriendRequests()->count() > 0)<span class="badge badge-friend">{{\Auth::user()->getFriendRequests()->count()}}</span> @endif Friends</a></li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search" action="{{route('search.results')}}">
-                <div class="form-group">
-                    <input type="search" name="q" class="form-control" placeholder="Search">
-                </div>
-            </form>
+                <li @if(\Request::is('/')) class="active" @endif><a href="/">Home</a></li>  
+                <li @if(\Request::is('/task')) class="active" @endif><a href="{{route('task.index')}}">Task</a></li> 
+            </ul>            
             @endif
             <ul class="nav navbar-nav navbar-right">
                 
@@ -31,8 +25,7 @@
                         {{\Auth::user()->getNameOrUsername()}}<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li @if(\Request::is('profile*')) class="active" @endif><a href="{{route('user.profile.edit')}}"><i class="fa fa-user"></i> Profile</a></li>
-                        <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>                       
+                            
                         <li class="divider" role="separator"></li>                        
                         <li><a href="{{route('logout')}}"><i class="fa fa-sign-out"></i> Logout</a></li>                       
                     </ul>
